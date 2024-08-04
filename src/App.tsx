@@ -1,17 +1,21 @@
-import { useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 
 function App() {
   return (
     <>
       <Canvas>
-        <mesh>
-          <torusGeometry />
-          <meshNormalMaterial />
-        </mesh>
+        <Torus />
       </Canvas>
     </>
   )
 }
 
+export function Torus(): JSX.Element {
+  return (
+    <mesh>
+      <torusGeometry />
+      <meshNormalMaterial />
+    </mesh>
+  )
+}
 export default App
