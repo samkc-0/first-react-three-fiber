@@ -1,8 +1,17 @@
 import { useState } from 'react'
-function App() {
-  const [count, setCount] = useState(0)
+import { Canvas } from '@react-three/fiber'
 
-  return <>Soon to be an R3F app</>
+function App() {
+  return (
+    <>
+      <Canvas>
+        <mesh>
+          <torusGeometry />
+          <meshNormalMaterial />
+        </mesh>
+      </Canvas>
+    </>
+  )
 }
 
 export default App
